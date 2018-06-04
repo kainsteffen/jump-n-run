@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     public float jumpForce;
+    public bool grounded;
 
     public SpriteRenderer sprite;
     public Rigidbody2D rigidBody;
@@ -48,10 +49,7 @@ public class PlayerController : MonoBehaviour
             animator.SetInteger("State", 3);
         }
 
-
-
-
-        RaycastHit2D grounded = Physics2D.Linecast(transform.position, groundCheck.position, LayerMask.GetMask("Ground"));
+        grounded = Physics2D.Linecast(transform.position, groundCheck.position, LayerMask.GetMask("Ground"));
 
         animator.SetBool("Grounded", grounded);
 
