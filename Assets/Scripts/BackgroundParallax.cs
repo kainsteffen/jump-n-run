@@ -7,7 +7,7 @@ public class BackgroundParallax : MonoBehaviour
     public float backgroundSize;
     public Transform mainCamera;
     public float smoothing = 1f;
-        public Transform[] layers;
+    public Transform[] layers;
     public float[] scales;
 
 
